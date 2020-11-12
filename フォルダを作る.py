@@ -1,9 +1,10 @@
 #これを実行することで、フォルダにexcelに書いたフォルダ名を持つ複数のフォルダを作ることができる
 import os
 import csv
-stores_path = "店舗コード.csv"
 
-with open(stores_path, encoding="cp932") as f:
+path = "読み込むexcelファイル名"   #excelファイルを読み込む
+
+with open(path, encoding="cp932") as f:
     reader= csv.reader(f)
     for row in  reader:
         folder_name  = row[0] + '_' + row[1]
